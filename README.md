@@ -59,4 +59,8 @@ reaproveitar código.
 
 Outro ponto interessante era a implementação do cypress para testes e2e.
 
+### Docker
+
+Uma coisa legal teria sido implementar um docker compose que rode o monorepo,
+assim evitando qualquer dificuldade em rodar o projeto.
 
