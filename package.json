@@ -10,9 +10,6 @@
     "start:backend": "cd backend && npm start",
     "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
   },
-  "dependencies": {
-    "tailwind-variants": "^0.3.0"
-  },
   "devDependencies": {
     "lerna": "^8.0.2"
   },
