@@ -1,13 +1,15 @@
 // Preferences.js
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Checkbox from '../../shared/Checkbox';
+import {ErrorMessage} from "./ErrorMessage";
 
 function Preferences({
-  preferences,
-  selectedPreferences = [],
-  onPreferenceChange,
-}) {
+                       preferences,
+                       messageError,
+                       selectedPreferences = [],
+                       onPreferenceChange,
+                     }) {
   const [currentPreferences, setCurrentPreferences] = useState(selectedPreferences)
 
   const handlePreferenceChange = (preference) => {
@@ -22,6 +24,7 @@ function Preferences({
   return (
     <div className="mb-4">
       <h2 className="text-lg font-bold mb-2">Preferências:</h2>
+      <ErrorMessage>{messageError}</ErrorMessage>
       <ul>
         {preferences.map((preference, index) => (
           <li key={index} className="mb-2">

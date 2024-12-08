@@ -21,7 +21,7 @@
  * @param {Array<Product>} products - List of products to filter and recommend.
  */
 const getRecommendations = (
-  formData = { selectedPreferences: [], selectedFeatures: [], selectedRecommendationType: 'MultipleProducts' },
+  formData = {selectedPreferences: [], selectedFeatures: [], selectedRecommendationType: 'MultipleProducts'},
   products
 ) => {
   /** @type {Array<Product>} */
@@ -48,7 +48,6 @@ const getRecommendations = (
           product,
         }
       }
-
     }
     recommendations.push(filtered.product)
   }
@@ -63,7 +62,7 @@ const getRecommendations = (
  * @returns {number}
  */
 
-const getScoreOfMatching = (product, features= [], preferences= []) => {
+const getScoreOfMatching = (product, features = [], preferences = []) => {
   const featureMatches = product.features.filter(feature => features.includes(feature)).length;
 
   const preferenceMatches = product.preferences.filter(preference => preferences.includes(preference)).length;
@@ -72,6 +71,4 @@ const getScoreOfMatching = (product, features= [], preferences= []) => {
 }
 
 
-
-
-export default { getRecommendations };
+export {getRecommendations};
