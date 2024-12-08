@@ -1,9 +1,11 @@
 # RD Station - Tech Interview React
 
+![Layout do projeto](https://github.com/isaacmirandacampos/rd-station-tech-interview-react/blob/master/docs/challenger.md?raw=true).
+
 ## Sobre o desafio
 
 Você pode ler a descrição do
-desafio [aqui](https://github.com/isaacmirandacampos/rd-station-tech-interview-react/master/docs/challenger.md).
+desafio [aqui](https://github.com/isaacmirandacampos/rd-station-tech-interview-react/blob/master/docs/challenger.md).
 
 ## Considerações do projeto
 
@@ -36,8 +38,9 @@ embora fosse até mesmo possível melhorar a experiência de uso, não julguei i
 
 ## Ideias
 
-Embora o projeto tinha até 3 dias para ser executado, infelizmente eu só consegui dedicar algumas horas no último dia,
-por questões como essa, estou fazendo um levantamento do que eu consideraria fazer no cenário ideal.
+Embora o projeto tinha até 72 horas após recebimento do e-mail para ser executado, infelizmente eu só
+consegui dedicar algumas horas no último dia, por questões como essa, estou fazendo um levantamento do que eu
+consideraria fazer no cenário ideal.
 
 ### Uso de cache
 
