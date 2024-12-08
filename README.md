@@ -1,7 +1,5 @@
 # RD Station - Tech Interview React
 
-![Layout do projeto](https://github.com/isaacmirandacampos/rd-station-tech-interview-react/blob/master/docs/rd-station-tech-interview.gif)
-
 ## Sobre o desafio
 
 Você pode ler a descrição do
