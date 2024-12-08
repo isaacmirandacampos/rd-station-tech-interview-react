@@ -1,5 +1,5 @@
 import React from 'react';
-import ReturnButton from "../Wizard/ReturnButton";
+import ReturnButton from "../shared/Wizard/ReturnButton";
 import {ProductCard} from "./ProductCard";
 
 /**
