@@ -58,9 +58,9 @@ function Form({applyRecommendations}) {
     if (!['SingleProduct', 'MultipleProducts'].includes(valuesToValidate.selectedRecommendationType)) {
       registerError('selectedRecommendationType', "Selecione a quantidade de recomendações visíveis que deseja")
     }
-    if (!valuesToValidate.selectedFeatures.length > 0 && !valuesToValidate.selectedFeatures.length > 0) {
-      registerError("selectedFeatures", "Selecione ao menos uma funcionalidade desejada ou preferência")
-      registerError("selectedPreferences", "Selecione ao menos uma funcionalidade desejada ou preferência")
+    if (!valuesToValidate.selectedFeatures.length > 0 && !valuesToValidate.selectedPreferences.length > 0) {
+      registerError("selectedPreferences", "Selecione ao menos uma preferência")
+      registerError("selectedFeatures", "Selecione ao menos uma funcionalidade")
     }
   }
 
@@ -68,29 +68,31 @@ function Form({applyRecommendations}) {
 
   return (
     <form
-      className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md"
+      className="max-w-fit mx-auto p-2 md:w-full md:p-4 bg-white rounded-lg shadow-md md:h-[500px] "
       onSubmit={handleSubmit}
     >
-      <Preferences
-        preferences={preferences}
-        messageError={messageErrorIfDirty('selectedPreferences')}
-        onPreferenceChange={(selected) =>
-          handleChange({selectedPreferences: selected})
-        }
-      />
-      <Features
-        features={features}
-        messageError={messageErrorIfDirty('selectedFeatures')}
-        onFeatureChange={(selected) =>
-          handleChange({selectedFeatures: selected})
-        }
-      />
-      <RecommendationType
-        messageError={messageErrorIfDirty('selectedRecommendationType')}
-        onRecommendationTypeChange={(selected) =>
-          handleChange({selectedRecommendationType: selected})
-        }
-      />
+      <div className="md:overflow-auto md:h-[400px] mb-2 w-full grid grid-cols-1 md:grid-cols-2">
+        <Preferences
+          preferences={preferences}
+          messageError={messageErrorIfDirty('selectedPreferences')}
+          onPreferenceChange={(selected) =>
+            handleChange({selectedPreferences: selected})
+          }
+        />
+        <Features
+          features={features}
+          messageError={messageErrorIfDirty('selectedFeatures')}
+          onFeatureChange={(selected) =>
+            handleChange({selectedFeatures: selected})
+          }
+        />
+        <RecommendationType
+          messageError={messageErrorIfDirty('selectedRecommendationType')}
+          onRecommendationTypeChange={(selected) =>
+            handleChange({selectedRecommendationType: selected})
+          }
+        />
+      </div>
       <SubmitButton text="Obter recomendação"/>
     </form>
   );

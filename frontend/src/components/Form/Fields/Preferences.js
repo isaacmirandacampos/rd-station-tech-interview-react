@@ -26,8 +26,8 @@ function Preferences({
       <h2 className="text-lg font-bold mb-2">Preferências:</h2>
       <ErrorMessage>{messageError}</ErrorMessage>
       <ul>
-        {preferences.map((preference, index) => (
-          <li key={index} className="mb-2">
+        {preferences.map((preference) => (
+          <li key={preference} className="mb-2">
             <Checkbox
               value={preference}
               checked={currentPreferences.includes(preference)}
